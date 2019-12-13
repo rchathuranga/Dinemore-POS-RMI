@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DinemoreChef/DinemoreChef.iml" filepath="$PROJECT_DIR$/DinemoreChef/DinemoreChef.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DinemoreCommon/DinemoreCommon.iml" filepath="$PROJECT_DIR$/DinemoreCommon/DinemoreCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DinemoreManager/DinemoreManager.iml" filepath="$PROJECT_DIR$/DinemoreManager/DinemoreManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DinemoreServer/DinemoreServer.iml" filepath="$PROJECT_DIR$/DinemoreServer/DinemoreServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DinemoreTelephoneOperator/DinemoreTelephoneOperator.iml" filepath="$PROJECT_DIR$/DinemoreTelephoneOperator/DinemoreTelephoneOperator.iml" />
+    </modules>
+  </component>
+</project>

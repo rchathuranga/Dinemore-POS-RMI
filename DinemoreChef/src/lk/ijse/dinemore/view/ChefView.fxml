@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="1097.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.ChefController">
+   <children>
+      <AnchorPane layoutY="29.0" prefHeight="634.0" prefWidth="790.0" style="-fx-background-color: #F49D37; -fx-background-radius: 30;">
+         <children>
+            <AnchorPane layoutX="-40.0" layoutY="22.0" prefHeight="66.0" prefWidth="743.0" style="-fx-background-color: #140F2D; -fx-background-radius: 100;">
+               <children>
+                  <Label fx:id="lblEmpId" layoutX="356.0" layoutY="11.0" prefHeight="43.0" prefWidth="113.0" text="Emp ID" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="72.0" layoutY="10.0" prefHeight="43.0" prefWidth="242.0" text="Chef" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblEmpName" alignment="CENTER_RIGHT" layoutX="511.0" layoutY="8.0" prefHeight="43.0" prefWidth="182.0" text="Emp Name" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="22.0" layoutY="113.0" prefHeight="402.0" prefWidth="693.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Label alignment="CENTER" layoutX="115.0" layoutY="79.0" prefHeight="27.0" prefWidth="99.0" text="Order Id">
+                     <font>
+                        <Font name="Roboto Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lblOrderId" alignment="CENTER" editable="false" layoutX="94.0" layoutY="106.0" prefHeight="102.0" prefWidth="142.0" text="01">
+                     <font>
+                        <Font name="Agency FB Bold" size="49.0" />
+                     </font></TextField>
+                  <Label alignment="CENTER" layoutX="115.0" layoutY="227.0" prefHeight="27.0" prefWidth="99.0" text="Customer">
+                     <font>
+                        <Font name="Roboto Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lblCName" editable="false" layoutX="62.0" layoutY="255.0" prefHeight="26.0" prefWidth="206.0" />
+                  <JFXButton fx:id="btnTakeOrder" contentDisplay="TOP" layoutX="26.0" layoutY="309.0" onAction="#btnTakeOrderAction" prefHeight="75.0" prefWidth="114.0" style="-fx-background-color: #FFC75F;" text="Take Order">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                           <image>
+                              <Image url="@../assets/img/271218.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Agency FB Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnFinishOrder" buttonType="RAISED" contentDisplay="TOP" layoutX="531.0" layoutY="309.0" onAction="#btnFinishOrderAction" prefHeight="75.0" prefWidth="114.0" style="-fx-background-color: #140F2D;" text="Finish Order" textFill="#f49d37">
+                     <font>
+                        <Font name="Agency FB Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                           <image>
+                              <Image url="@../assets/img/output-onlinepngtools%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label fx:id="lblProcessTime" layoutX="489.0" layoutY="6.0" prefHeight="58.0" prefWidth="192.0" text="00:00:000">
+                     <font>
+                        <Font name="Agency FB Bold" size="47.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="16.0" prefHeight="38.0" prefWidth="150.0" text="Order Placing">
+                     <font>
+                        <Font name="AvenirLTStd-Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblItem" layoutX="331.0" layoutY="86.0" prefHeight="200.0" prefWidth="326.0">
+                    <columns>
+                      <TableColumn prefWidth="63.20001220703125" text="Id" />
+                      <TableColumn prefWidth="199.99996948242188" text="Item" />
+                        <TableColumn prefWidth="63.199951171875" text="Qty" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="737.0" layoutY="30.0" prefHeight="633.0" prefWidth="358.0" style="-fx-background-color: #140F2D; -fx-background-radius: 40;">
+         <children>
+            <JFXButton layoutX="45.0" layoutY="542.0" prefHeight="42.0" prefWidth="270.0" style="-fx-background-color: #F49D37;" text="Button">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="72.0" layoutY="47.0" prefHeight="32.0" prefWidth="192.0" text="Order Review" textFill="#f49d37">
+               <font>
+                  <Font name="Agency FB Bold" size="34.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnClose" contentDisplay="GRAPHIC_ONLY" layoutX="312.0" onAction="#btnCloseAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #F22B29;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/close_1-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <AnchorPane layoutX="78.0" layoutY="121.0" prefHeight="366.0" prefWidth="200.0" style="-fx-border-radius: 5; -fx-border-color: black; -fx-background-color: #ffffff;">
+               <children>
+                  <AnchorPane layoutX="29.0" layoutY="25.0" prefHeight="90.0" prefWidth="142.0" style="-fx-background-color: #fffff0;">
+                     <children>
+                        <Label layoutX="53.0" layoutY="5.0" text="00">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="63.0" prefHeight="20.0" prefWidth="106.0" text="Orders Finsihed">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="29.0" layoutY="135.0" prefHeight="90.0" prefWidth="142.0" style="-fx-background-color: #fffff0;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="9.0" layoutY="5.0" prefHeight="50.0" prefWidth="122.0" text="00:00">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="18.0" layoutY="63.0" prefHeight="20.0" prefWidth="106.0" text="Min PT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="29.0" layoutY="245.0" prefHeight="90.0" prefWidth="142.0" style="-fx-background-color: #fffff0;">
+                     <children>
+                        <Label layoutX="53.0" layoutY="5.0" text="00">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="63.0" prefHeight="20.0" prefWidth="106.0" text="Orders Finsihed">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="40.0" layoutY="640.0" prefHeight="24.0" prefWidth="1013.0" style="-fx-background-color: transparent;">
+         <children>
+            <AnchorPane fx:id="pnlAlert" layoutX="56.0" prefHeight="24.0" prefWidth="603.0" style="-fx-background-color: #140F2D; -fx-background-radius: 10;">
+               <children>
+                  <Label fx:id="lblAlert" alignment="CENTER" layoutX="42.0" layoutY="3.0" prefHeight="18.0" prefWidth="520.0" text="Alerts will Display Here" textFill="WHITE">
+                     <font>
+                        <Font name="AvenirLTStd-Black" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

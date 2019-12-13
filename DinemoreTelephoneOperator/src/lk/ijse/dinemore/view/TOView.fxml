@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="1097.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.TOController">
+   <children>
+      <AnchorPane layoutY="20.0" prefHeight="630.0" prefWidth="790.0" style="-fx-background-radius: 30; -fx-background-color: #F49D37;">
+         <children>
+            <AnchorPane layoutX="-42.0" layoutY="16.0" prefHeight="66.0" prefWidth="743.0" style="-fx-background-color: #140F2D; -fx-background-radius: 100;">
+               <children>
+                  <Label fx:id="lblEmpId" layoutX="416.0" layoutY="11.0" prefHeight="43.0" prefWidth="113.0" text="Emp ID" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="72.0" layoutY="10.0" prefHeight="43.0" prefWidth="242.0" text="TelePhone Operator" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblEmpName" alignment="CENTER_RIGHT" layoutX="511.0" layoutY="8.0" prefHeight="43.0" prefWidth="182.0" text="Emp Name" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Separator layoutX="17.0" layoutY="370.0" prefHeight="0.0" prefWidth="691.0" style="-fx-background-color: black;" />
+            <AnchorPane layoutX="12.0" layoutY="102.0" prefHeight="242.0" prefWidth="700.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <JFXTextField fx:id="txtCustomerContact" focusColor="#f49d37" labelFloat="true" layoutX="15.0" layoutY="68.0" onKeyReleased="#txtCusContactKeyAction" prefHeight="38.0" prefWidth="323.0" promptText="Customer Contact" style="-fx-text-size: #F49D37;" styleClass="-" unFocusColor="#140f2d" />
+                  <JFXTextField fx:id="txtCustomerName" focusColor="#f49d37" labelFloat="true" layoutX="15.0" layoutY="133.0" prefHeight="38.0" prefWidth="323.0" promptText="Customer Name" style="-fx-text-size: #F49D37;" unFocusColor="#140f2d" />
+                  <JFXTextField fx:id="txtOrderQty" focusColor="#f49d37" labelFloat="true" layoutX="357.0" layoutY="133.0" prefHeight="38.0" prefWidth="323.0" promptText="Qty" style="-fx-text-size: #F49D37;" unFocusColor="#140f2d" />
+                  <JFXComboBox fx:id="cmbOrderItem" focusColor="#140f2d" labelFloat="true" layoutX="357.0" layoutY="68.0" prefHeight="38.0" prefWidth="323.0" promptText="Item" unFocusColor="BLACK" />
+                  <Label layoutX="25.0" layoutY="14.0" prefHeight="38.0" prefWidth="150.0" text="Order Placing">
+                     <font>
+                        <Font name="AvenirLTStd-Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblOrderId" alignment="CENTER_RIGHT" layoutX="514.0" layoutY="4.0" prefHeight="58.0" prefWidth="150.0" text="00" textFill="#140f2d">
+                     <font>
+                        <Font name="Agency FB Bold" size="47.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnReset" layoutX="464.0" layoutY="191.0" onAction="#btnResetAction" prefHeight="26.0" prefWidth="114.0" style="-fx-border-color: red; -fx-background-radius: 10; -fx-border-radius: 10;" text="Reset" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAddToList" contentDisplay="GRAPHIC_ONLY" layoutX="605.0" layoutY="181.0" onAction="#btnAddToListAction" prefHeight="50.0" prefWidth="50.0" ripplerFill="#f49d37" style="-fx-background-radius: 50;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/Right_Arrow_Filled-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="12.0" layoutY="398.0" prefHeight="200.0" prefWidth="700.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <JFXTextField fx:id="txtUpdateQty" focusColor="#140f2d" labelFloat="true" layoutX="358.0" layoutY="77.0" prefHeight="38.0" prefWidth="323.0" promptText="Qty" style="-fx-text-size: #F49D37;" unFocusColor="BLACK" />
+                  <JFXComboBox fx:id="cmbUpdateItem" focusColor="#140f2d" labelFloat="true" layoutX="16.0" layoutY="76.0" prefHeight="38.0" prefWidth="323.0" promptText="Item" style="-fx-text-size: #F49D37;" unFocusColor="BLACK" />
+                  <Label layoutX="27.0" layoutY="10.0" prefHeight="38.0" prefWidth="150.0" text="Change Order">
+                     <font>
+                        <Font name="AvenirLTStd-Roman" size="19.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnUpdate" contentDisplay="GRAPHIC_ONLY" layoutX="614.0" layoutY="131.0" onAction="#btnUpdateAction" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #140F2D;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/image%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCancel" layoutX="460.0" layoutY="137.0" onAction="#btnCancelAction" prefHeight="32.0" prefWidth="123.0" style="-fx-border-color: red; -fx-border-radius: 10;" text="Cancel" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField fx:id="txtSearchOrder1" layoutX="184.0" layoutY="13.0" onAction="#txtSearchOrderAction" prefHeight="32.0" prefWidth="182.0" promptText="Search by Order ID" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="30.0" layoutY="609.0" prefHeight="24.0" prefWidth="1013.0" style="-fx-background-color: transparent;">
+               <children>
+                  <AnchorPane fx:id="pnlAlert" layoutX="56.0" prefHeight="24.0" prefWidth="603.0" style="-fx-background-color: #140F2D; -fx-background-radius: 10;">
+                     <children>
+                        <Label fx:id="lblAlert" alignment="CENTER" layoutX="42.0" layoutY="3.0" prefHeight="18.0" prefWidth="520.0" text="Alerts will Display Here" textFill="WHITE">
+                           <font>
+                              <Font name="AvenirLTStd-Black" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="732.0" layoutY="20.0" prefHeight="633.0" prefWidth="358.0" style="-fx-background-color: #140F2D; -fx-background-radius: 40;">
+         <children>
+            <TableView fx:id="tblItemList" layoutX="18.0" layoutY="154.0" onMouseClicked="#tblMouseClick" prefHeight="301.0" prefWidth="323.0">
+              <columns>
+                <TableColumn prefWidth="75.0" style="-fx-background-color: red;" text="C1" visible="false" />
+                <TableColumn prefWidth="35.7333984375" style="-fx-background-color: #F49D37;" text="Id" />
+                  <TableColumn prefWidth="164.0" style="-fx-background-color: #F49D37;" text="Name" />
+                  <TableColumn prefWidth="43.2000732421875" style="-fx-background-color: #F49D37;" text="Qty" />
+                  <TableColumn prefWidth="78.40001220703124" style="-fx-background-color: #F49D37;" text="Price" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnPlaceOrder" layoutX="45.0" layoutY="542.0" onAction="#btnPlaceOrderAction" prefHeight="42.0" prefWidth="270.0" style="-fx-background-color: #F49D37;" text="Place Order">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="72.0" layoutY="47.0" prefHeight="32.0" prefWidth="192.0" text="Order Review" textFill="#f49d37">
+               <font>
+                  <Font name="Agency FB Bold" size="34.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnClose" contentDisplay="GRAPHIC_ONLY" layoutX="312.0" onAction="#btnCloseAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #F22B29;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/close_1-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="lblTotal" alignment="CENTER_RIGHT" layoutX="143.0" layoutY="464.0" prefHeight="52.0" prefWidth="182.0" text="0.0" textFill="#f49d37">
+               <font>
+                  <Font name="Agency FB Bold" size="42.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="464.0" prefHeight="52.0" prefWidth="74.0" text="Total" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="42.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearchOrder" alignment="CENTER" layoutX="77.0" layoutY="105.0" onAction="#txtSearchOrderAction" prefHeight="32.0" prefWidth="182.0" text="000">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+style.css
+
+.warning{
+	-fx-background-color: #F49D37;
+	-fx-background-radius:  10;
+	-fx-border-radius: 10;	
+}
+
+.wariningText{
+	-fx-text-fill: #140F2D;
+}
+
+.done{
+	-fx-background-color: #83ffd0;
+	-fx-background-radius:  10;
+	-fx-border-radius: 10;	
+}
+
+.doneText{
+	-fx-text-fill: #140F2D;
+}
+
+.fail{
+	-fx-background-color: #83ffd0;
+	-fx-background-radius:  10;
+	-fx-border-radius: 10;		
+}
+
+.failText{
+	-fx-text-fill: red;
+}
+
+.default{
+	-fx-background-color: #140F2D;
+	-fx-background-radius:  10;
+	-fx-border-radius: none
+}
+
+.defaultText{
+	-fx-text-fill: #fff;	
+}

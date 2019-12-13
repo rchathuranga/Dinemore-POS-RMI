@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DinemoreCommon:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DinemoreCommon_jar</output-path>
+    <root id="archive" name="DinemoreCommon.jar">
+      <element id="module-output" name="DinemoreCommon" />
+    </root>
+  </artifact>
+</component>
